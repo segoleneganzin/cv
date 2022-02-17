@@ -3,24 +3,35 @@ $bleu-sombre:#061539;
 $vert-sombre:#003133;
 $bleu-clair:#7887AB;
 $vert-clair:#67989A;
-$couleur-fond:#B4C1B8;
+$couleur-fond: #F3F6F4;
+$couleur-menu: #003133;
+$couleur-fond-hobbies: #417E80;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
     background-color: $couleur-fond;
+    background-image: url(/img/beach-at-sunset-in-teal-and-orange.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
     color: $bleu-clair;
 } 
 
 /*menu*/
 .menu {
     display: block;
-    background-color: $bleu-sombre;
+    background-color: $couleur-menu;
     width: 250px;
     height: 100vh;
     min-height: 800px;
     position: fixed;
-    box-shadow: 2px 0px 5px $bleu-sombre;
+    box-shadow: 2px 0px 5px $couleur-menu;
     z-index: 5;
-    transition: all 0.3s 0.1s ease-in-out;
 }
 .blocs-menu {
     width: 100%;
@@ -52,13 +63,24 @@ body {
     padding: 10%;
 
     &::after {
-    content: "";
-        display: block;
-        margin: 5px auto 0 auto;
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: 50% 50%;
+        width: 50%;
         height: 2px;
         border-radius: 2px;
         background-color: #7887AB;
+        transition: transform 250ms;
         }
+    &:hover {
+        &::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+    }  
+
     a {
         text-decoration: none;
         color: #7887AB;
@@ -75,7 +97,7 @@ header {
     // background-repeat: no-repeat;
     // background-size: 85%; 
     background-color: $vert-sombre;
-    box-shadow: 2px 0px 5px $vert-sombre;
+    box-shadow: 0px 1px 5px $vert-sombre;
     border-radius: 0 0 50% 30%;
     width: calc(100% - 250px);
     max-height: 550px;
@@ -91,25 +113,85 @@ header {
 #resume {
     padding-left: 15%;
 }
-#adress img {
-    max-width: 25%;
-    max-height: 25%;
-}
 
 /*contenu*/
 .contenu {
     width: calc(100% - 250px);
     position: relative;
     margin-left: auto;
-    padding: 3% 5% 10% 0;
+    padding: 3% 0 10% 0;
     h1 {
         font-size: 50px;
+        color: white;
     }
     p {
         margin: 5% 0 5% 5%;
     }
+    #presentation {
+        border: 1px solid $vert-clair;
+        border-radius: 0 15% 15% 15%;
+        box-shadow: 0px 1px 5px $vert-clair;
+        background-color: $vert-clair;
+        color: $bleu-sombre;
+        padding: 5% 0 0 0;
+        margin: 0 0 2% 0;
+    }
+    #training {
+        border: 1px solid $bleu-clair;
+        border-radius: 0 10% 80% 15%;
+        box-shadow: 0px 1px 5px $bleu-clair;
+        background-color: $bleu-clair;
+        color: $bleu-sombre;
+        padding: 5% 0 0 0;
+        margin: 0 0 2% 0;
+    }
+    #skills h1{
+        color: $vert-clair;
+    }
+    #experiences {
+        margin: 5% 0 10% 0;
+        border-radius: 100%;
+        background-color: $vert-sombre;
+        box-shadow: 2px 0px 5px $vert-sombre;
+        text-align: center;
+        padding: 2% 0 5% 0 ;
+        h3 {
+            margin: 1%  1% ;
+        }
+        h4 {
+            font-style: italic;
+            font-size: smaller;
+            margin: 0 0 1% 0;
+        }
+        p {
+            margin: 0;
+        }
+    }
+    #hobbies {
+        background-color: $couleur-fond-hobbies;
+        box-shadow: 2px 0px 5px $couleur-fond-hobbies;
+        color: $bleu-sombre;
+        padding-bottom: 2%;
+    }
+    #contact {
+        border: 2px solid $couleur-menu;
+        margin: 2% 25% 0 25%;
+        h1 {
+            color: $couleur-menu;
+        }
+    }
 }
 
+/*footer*/
+footer {
+    width: calc(100% - 250px);
+    min-height: 100px;
+    background-color: $couleur-menu;
+    position: relative;
+    margin-left: auto;
+    border-radius: 0 100% 0 0;
+    box-shadow: 2px 0px 5px $couleur-menu;
+}
 
 /*Responsive*/
 @media (max-width: 1300px) {
@@ -131,18 +213,6 @@ header {
         text-align: center;
     }
 
-    /* .btn-rond-menu {
-        margin-top: 10%;
-        width: 70px;
-        height: 70px;
-        border: 1px solid #f1f1f1;
-        border-radius: 50%;
-        background-color: #333;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 1;
-    } */
 
     /*Entete*/
     header {

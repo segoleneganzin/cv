@@ -1,40 +1,59 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  background-color: #B4C1B8;
+  background-color: #F3F6F4;
+  background-image: url(/img/beach-at-sunset-in-teal-and-orange.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
   color: #7887AB;
 }
 
 /*menu*/
 .menu {
   display: block;
-  background-color: #061539;
+  background-color: #003133;
   width: 250px;
   height: 100vh;
   min-height: 800px;
   position: fixed;
-  box-shadow: 2px 0px 5px #061539;
+  -webkit-box-shadow: 2px 0px 5px #003133;
+          box-shadow: 2px 0px 5px #003133;
   z-index: 5;
-  transition: all 0.3s 0.1s ease-in-out;
 }
 
 .blocs-menu {
   width: 100%;
   height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .blocs-menu:nth-child(1) {
   width: 100%;
   height: 25%;
 }
+
 .blocs-menu:nth-child(1) .photoId img {
   margin: 20px 0;
   width: 160px;
   height: 160px;
   border-radius: 50%;
   position: relative;
-  box-shadow: 20px 20px 50px black;
+  -webkit-box-shadow: 20px 20px 50px black;
+          box-shadow: 20px 20px 50px black;
 }
 
 .blocs-menu span {
@@ -45,14 +64,31 @@ body {
   cursor: pointer;
   padding: 10%;
 }
+
 .blocs-menu span::after {
-  content: "";
-  display: block;
-  margin: 5px auto 0 auto;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%) scaleX(0);
+          transform: translateX(-50%) scaleX(0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  width: 50%;
   height: 2px;
   border-radius: 2px;
   background-color: #7887AB;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
 }
+
+.blocs-menu span:hover::after {
+  -webkit-transform: translateX(-50%) scaleX(1);
+          transform: translateX(-50%) scaleX(1);
+}
+
 .blocs-menu span a {
   text-decoration: none;
   color: #7887AB;
@@ -65,7 +101,8 @@ body {
 /*entete*/
 header {
   background-color: #003133;
-  box-shadow: 2px 0px 5px #003133;
+  -webkit-box-shadow: 0px 1px 5px #003133;
+          box-shadow: 0px 1px 5px #003133;
   border-radius: 0 0 50% 30%;
   width: calc(100% - 250px);
   max-height: 550px;
@@ -84,23 +121,100 @@ header {
   padding-left: 15%;
 }
 
-#adress img {
-  max-width: 25%;
-  max-height: 25%;
-}
-
 /*contenu*/
 .contenu {
   width: calc(100% - 250px);
   position: relative;
   margin-left: auto;
-  padding: 3% 5% 10% 0;
+  padding: 3% 0 10% 0;
 }
+
 .contenu h1 {
   font-size: 50px;
+  color: white;
 }
+
 .contenu p {
   margin: 5% 0 5% 5%;
+}
+
+.contenu #presentation {
+  border: 1px solid #67989A;
+  border-radius: 0 15% 15% 15%;
+  -webkit-box-shadow: 0px 1px 5px #67989A;
+          box-shadow: 0px 1px 5px #67989A;
+  background-color: #67989A;
+  color: #061539;
+  padding: 5% 0 0 0;
+  margin: 0 0 2% 0;
+}
+
+.contenu #training {
+  border: 1px solid #7887AB;
+  border-radius: 0 10% 80% 15%;
+  -webkit-box-shadow: 0px 1px 5px #7887AB;
+          box-shadow: 0px 1px 5px #7887AB;
+  background-color: #7887AB;
+  color: #061539;
+  padding: 5% 0 0 0;
+  margin: 0 0 2% 0;
+}
+
+.contenu #skills h1 {
+  color: #67989A;
+}
+
+.contenu #experiences {
+  margin: 5% 0 10% 0;
+  border-radius: 100%;
+  background-color: #003133;
+  -webkit-box-shadow: 2px 0px 5px #003133;
+          box-shadow: 2px 0px 5px #003133;
+  text-align: center;
+  padding: 2% 0 5% 0;
+}
+
+.contenu #experiences h3 {
+  margin: 1%  1%;
+}
+
+.contenu #experiences h4 {
+  font-style: italic;
+  font-size: smaller;
+  margin: 0 0 1% 0;
+}
+
+.contenu #experiences p {
+  margin: 0;
+}
+
+.contenu #hobbies {
+  background-color: #417E80;
+  -webkit-box-shadow: 2px 0px 5px #417E80;
+          box-shadow: 2px 0px 5px #417E80;
+  color: #061539;
+  padding-bottom: 2%;
+}
+
+.contenu #contact {
+  border: 2px solid #003133;
+  margin: 2% 25% 0 25%;
+}
+
+.contenu #contact h1 {
+  color: #003133;
+}
+
+/*footer*/
+footer {
+  width: calc(100% - 250px);
+  min-height: 100px;
+  background-color: #003133;
+  position: relative;
+  margin-left: auto;
+  border-radius: 0 100% 0 0;
+  -webkit-box-shadow: 2px 0px 5px #003133;
+          box-shadow: 2px 0px 5px #003133;
 }
 
 /*Responsive*/
@@ -109,6 +223,7 @@ header {
   .menu {
     width: 100%;
     margin: 0 auto;
+    position: -webkit-sticky;
     position: sticky;
     top: 0px;
   }
@@ -117,25 +232,11 @@ header {
     text-decoration: none;
     padding: 10px 0px;
   }
-
   .item-menu {
     width: auto;
     float: left;
     text-align: center;
   }
-
-  /* .btn-rond-menu {
-      margin-top: 10%;
-      width: 70px;
-      height: 70px;
-      border: 1px solid #f1f1f1;
-      border-radius: 50%;
-      background-color: #333;
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      z-index: 1;
-  } */
   /*Entete*/
   header {
     width: 100%;
@@ -143,20 +244,16 @@ header {
     padding: 0;
     z-index: 2;
   }
-
   .entete h1 {
     font-size: 3em;
   }
-
   #resume, #adress, #entete h1 {
     padding-left: 5%;
   }
-
   #adress img {
     max-width: 10%;
     max-height: 10%;
   }
-
   /*Contenu*/
   .contenu {
     width: 100%;
@@ -168,5 +265,4 @@ header {
     font-size: 1rem;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
