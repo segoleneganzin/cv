@@ -1,0 +1,177 @@
+//Déclaration des couleurs de la
+$bleu-sombre:#061539;
+$vert-sombre:#003133;
+$bleu-clair:#7887AB;
+$vert-clair:#67989A;
+$couleur-fond:#B4C1B8;
+
+body {
+    background-color: $couleur-fond;
+    color: $bleu-clair;
+} 
+
+/*menu*/
+.menu {
+    display: block;
+    background-color: $bleu-sombre;
+    width: 250px;
+    height: 100vh;
+    min-height: 800px;
+    position: fixed;
+    box-shadow: 2px 0px 5px $bleu-sombre;
+    z-index: 5;
+    transition: all 0.3s 0.1s ease-in-out;
+}
+.blocs-menu {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.blocs-menu:nth-child(1) {
+    width: 100%;
+    height: 25%;
+
+    .photoId img {
+        margin: 20px 0;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 20px 20px 50px black;
+    }
+}
+.blocs-menu span {
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10%;
+
+    &::after {
+    content: "";
+        display: block;
+        margin: 5px auto 0 auto;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #7887AB;
+        }
+    a {
+        text-decoration: none;
+        color: #7887AB;
+        }
+}
+.item-menu {
+    margin-top: 3%;
+}
+
+
+/*entete*/
+header {
+    // background-image: url(/img/beach-at-sunset-in-teal-and-orange.jpg);
+    // background-repeat: no-repeat;
+    // background-size: 85%; 
+    background-color: $vert-sombre;
+    box-shadow: 2px 0px 5px $vert-sombre;
+    border-radius: 0 0 50% 30%;
+    width: calc(100% - 250px);
+    max-height: 550px;
+    position: relative;
+    margin-left: auto;
+    padding: 3% 5% 10% 2% ;
+    color: $vert-clair;
+}
+.entete h1{
+    font-size: 6em;
+    margin-bottom: 10%;
+}
+#resume {
+    padding-left: 15%;
+}
+#adress img {
+    max-width: 25%;
+    max-height: 25%;
+}
+
+/*contenu*/
+.contenu {
+    width: calc(100% - 250px);
+    position: relative;
+    margin-left: auto;
+    padding: 3% 5% 10% 0;
+    h1 {
+        font-size: 50px;
+    }
+    p {
+        margin: 5% 0 5% 5%;
+    }
+}
+
+
+/*Responsive*/
+@media (max-width: 1300px) {
+ /*Menu*/   
+    .menu {
+        width: 100%;
+        margin: 0 auto;
+        position: sticky;
+        top: 0px;  
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 10px 0px;
+            }
+    }
+    .item-menu {
+        width: auto;
+        float: left;
+        text-align: center;
+    }
+
+    /* .btn-rond-menu {
+        margin-top: 10%;
+        width: 70px;
+        height: 70px;
+        border: 1px solid #f1f1f1;
+        border-radius: 50%;
+        background-color: #333;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+    } */
+
+    /*Entete*/
+    header {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        z-index: 2;
+    }
+   
+    .entete h1 {
+        font-size: 3em;
+    }
+    #resume, #adress, #entete h1 {
+        padding-left: 5%;
+    }
+    #adress img {
+        max-width: 10% ;
+        max-height: 10%;
+    }
+
+    /*Contenu*/
+    .contenu {
+        width: 100%;
+        margin: 2%;
+        position: relative;
+        p {
+            margin-left: 0;       
+            font-size: 1rem;
+        }
+    }
+    
+}

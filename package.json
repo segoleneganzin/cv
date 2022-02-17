@@ -1,0 +1,22 @@
+{
+  "name": "cv_en_ligne_2",
+  "version": "1.0.0",
+  "description": "\"CV en ligne\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./style.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/segoleneganzin/cv.git"
+  },
+  "keywords": [
+    "\"cv\""
+  ],
+  "author": "\"Ségolène Ganzin\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/segoleneganzin/cv/issues"
+  },
+  "homepage": "https://github.com/segoleneganzin/cv#readme"
+}
