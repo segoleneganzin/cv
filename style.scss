@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "Greatvibes";
+    src: url("/font/Great_Vibes/GreatVibes-Regular.ttf");
+}
+@font-face {
+    font-family: "Garamond";
+    src: url("/font/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
+}
+
 //Déclaration des couleurs de la
 $bleu-sombre:#061539;
 $vert-sombre:#003133;
@@ -13,14 +22,22 @@ $couleur-fond-hobbies: #417E80;
   box-sizing: border-box;
 }
 
+
+
 body {
     background-color: $couleur-fond;
-    background-image: url(/img/beach-at-sunset-in-teal-and-orange.jpg);
+    background-image: url(/img/background_1.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
     color: $bleu-clair;
+    font-family: "Garamond", sans-serif;
 } 
+
+h1 {
+    font-family: "Garamond",sans-serif;
+    font-weight: bold;
+}
 
 /*menu*/
 .menu {
@@ -83,7 +100,8 @@ body {
 
     a {
         text-decoration: none;
-        color: #7887AB;
+        color: $bleu-clair;
+        font-size: 30px;
         }
 }
 .item-menu {
@@ -108,10 +126,11 @@ header {
 }
 .entete h1{
     font-size: 6em;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+    font-family: "Greatvibes", sans-serif;
 }
 #resume {
-    padding-left: 15%;
+    padding-left: 10%;
 }
 
 /*contenu*/
@@ -135,6 +154,12 @@ header {
         color: $bleu-sombre;
         padding: 5% 0 0 0;
         margin: 0 0 2% 0;
+        .quote {
+            border: 1px solid white;
+            padding: 1%;
+            display: block;
+            font-style: italic;
+        }
     }
     #training {
         border: 1px solid $bleu-clair;
@@ -191,11 +216,31 @@ footer {
     margin-left: auto;
     border-radius: 0 100% 0 0;
     box-shadow: 2px 0px 5px $couleur-menu;
+    p {
+        padding: 2% 0 0 2%;
+        margin: 0;
+        color: $vert-clair;
+        font-style: italic;
+    }
 }
+
+/*scroll up*/
+#scroll_to_top {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    bottom: 50px;
+    right: 30px;
+  }
 
 /*Responsive*/
 @media (max-width: 1300px) {
- /*Menu*/   
+
+    body {
+        background-size: cover;
+    }
+
+    /*Menu*/   
     .menu {
         width: 100%;
         margin: 0 auto;
@@ -220,6 +265,7 @@ footer {
         margin: 0;
         padding: 0;
         z-index: 2;
+        border-radius: 0 0 50% 0;
     }
    
     .entete h1 {
@@ -236,12 +282,36 @@ footer {
     /*Contenu*/
     .contenu {
         width: 100%;
-        margin: 2%;
+        margin: 0;
         position: relative;
         p {
-            margin-left: 0;       
+            margin-left: 1%;       
             font-size: 1rem;
+        }       
+    
+        #presentation {
+            border-radius: 0 ;
+            .quote {
+                padding: 5%;
+            }
+        }
+        #training {
+            border-radius: 5% 5% 5% 5%;
+        }
+        #experiences {
+            border-radius: 20% 0 20% 0;
+        }
+        #contact {
+            margin: 5% 10% 5% 10%;
+            h1 {
+                font-size: 30px;
+            }
         }
     }
-    
+    /*Footer*/
+    footer {
+        width: 100%;
+        margin: 0;
+        padding: 10% 5% 0 5%;
+    }
 }
