@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Greatvibes";
   src: url("/font/Great_Vibes/GreatVibes-Regular.ttf");
@@ -123,21 +122,22 @@ header {
           box-shadow: 0px 1px 5px #003133;
   border-radius: 0 0 50% 30%;
   width: calc(100% - 250px);
-  max-height: 550px;
+  max-height: 500px;
   position: relative;
   margin-left: auto;
   padding: 3% 5% 10% 2%;
   color: #67989A;
 }
 
-.entete h1 {
+header .entete h1 {
+  width: 100%;
   font-size: 6em;
   margin-bottom: 5%;
   font-family: "Greatvibes", sans-serif;
 }
 
-#resume {
-  padding-left: 10%;
+header #resume {
+  padding-left: 2%;
 }
 
 /*contenu*/
@@ -154,7 +154,7 @@ header {
 }
 
 .contenu p {
-  margin: 5% 0 5% 5%;
+  margin: 3% 0 5% 5%;
 }
 
 .contenu #presentation {
@@ -222,6 +222,12 @@ header {
   padding-bottom: 2%;
 }
 
+.contenu #hobbies img {
+  padding: 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .contenu #contact {
   border: 2px solid #003133;
   margin: 2% 25% 0 25%;
@@ -231,44 +237,20 @@ header {
   color: #003133;
 }
 
-.contenu #contact form {
-  margin: 0 25% 0 25%;
-  padding: 5%;
-  color: #003133;
-  font-size: 20px;
-}
-
-.contenu #contact form div {
-  padding: 2%;
-}
-
-.contenu #contact form label {
-  display: inline-block;
-  width: 150px;
-  text-align: left;
-}
-
-.contenu #contact form input, .contenu #contact form textarea {
-  /* Pour s'assurer que tous les champs texte ont la même police.
-                   Par défaut, les textarea ont une police monospace */
-  font: 1em Garamond;
-  /* Pour que tous les champs texte aient la même dimension */
-  width: 300px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  /* Pour harmoniser le look & feel des bordures des champs texte */
-  border: 1px solid #003133;
-}
-
-.contenu #contact form textarea {
-  height: 90px;
-}
-
 .contenu #contact form button {
+  display: block;
   padding: 5%;
+  margin: auto;
   border: 1px solid #003133;
   border-radius: 100rem;
   background: transparent;
+  font-size: 20px;
+}
+
+.contenu #contact a img {
+  display: block;
+  margin: auto;
+  padding: 2%;
 }
 
 /*footer*/
@@ -329,6 +311,7 @@ footer p {
     padding: 0;
     z-index: 2;
     border-radius: 0 0 50% 0;
+    min-height: 600px;
   }
   .entete h1 {
     font-size: 3em;
@@ -361,6 +344,9 @@ footer p {
   }
   .contenu #experiences {
     border-radius: 20% 0 20% 0;
+  }
+  .contenu #hobbies img {
+    margin-left: 10%;
   }
   .contenu #contact {
     margin: 5% 10% 5% 10%;
