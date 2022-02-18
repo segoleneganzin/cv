@@ -204,6 +204,41 @@ header {
         h1 {
             color: $couleur-menu;
         }
+        form {
+            margin: 0 25% 0 25%;
+            padding: 5%;
+            color: $couleur-menu;
+            font-size: 20px;
+            div {
+                padding: 2%;
+            }
+            label {
+                display: inline-block;
+                width: 150px;
+                text-align: left;
+            }
+            input, textarea {
+                /* Pour s'assurer que tous les champs texte ont la même police.
+                   Par défaut, les textarea ont une police monospace */
+                font: 1em Garamond;
+              
+                /* Pour que tous les champs texte aient la même dimension */
+                width: 300px;
+                box-sizing: border-box;
+              
+                /* Pour harmoniser le look & feel des bordures des champs texte */
+                border: 1px solid $vert-sombre;
+            }
+            textarea {
+                height: 90px;
+            }
+            button {
+                padding: 5%;
+                border: 1px solid $vert-sombre;
+                border-radius: 100rem;
+                background: transparent;
+            }
+        } 
     }
 }
 

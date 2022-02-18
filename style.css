@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Greatvibes";
   src: url("/font/Great_Vibes/GreatVibes-Regular.ttf");
@@ -228,6 +229,46 @@ header {
 
 .contenu #contact h1 {
   color: #003133;
+}
+
+.contenu #contact form {
+  margin: 0 25% 0 25%;
+  padding: 5%;
+  color: #003133;
+  font-size: 20px;
+}
+
+.contenu #contact form div {
+  padding: 2%;
+}
+
+.contenu #contact form label {
+  display: inline-block;
+  width: 150px;
+  text-align: left;
+}
+
+.contenu #contact form input, .contenu #contact form textarea {
+  /* Pour s'assurer que tous les champs texte ont la même police.
+                   Par défaut, les textarea ont une police monospace */
+  font: 1em Garamond;
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 300px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #003133;
+}
+
+.contenu #contact form textarea {
+  height: 90px;
+}
+
+.contenu #contact form button {
+  padding: 5%;
+  border: 1px solid #003133;
+  border-radius: 100rem;
+  background: transparent;
 }
 
 /*footer*/
