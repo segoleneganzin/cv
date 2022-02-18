@@ -3,7 +3,14 @@
    <head>
         <title>Ségolène Ganzin</title>
         <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="style.css"> <!-- Pour tout le monde -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--Script-->
+        <script src="script.js"> </script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!--Mon CSS-->
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <!--meta-->
         <meta name="description" content="CV en ligne, recherche d'une alternance développeur web" />
         
         <!-- Twitter Card data -->
@@ -18,79 +25,264 @@
 
    </head>
     <body>
-        <!-- Header -->
-        <header>
-            <div id="photoId"></div>
-            <div id="resume">
-                <h1>Ségolène Ganzin</h1>
-            </div>
-            <div id="adress"></div>
-        </header>
-        <!-- Menu -->
-        <section id="menu">
-            <nav>
-                <ul>
-                    <li><a href="#training">Formations</a></li>
-                    <li><a href="#skills">Compétences</a></li>
-                    <li><a href="#experiences">Expériences</a></li>
-                    <li><a href="#hobbies">Centres d'intérêt</a></li>
-                    <li><a href="contact">Me contacter</a></li>
-                </ul>
+        <div id="top"></div>
+        <!-- Menu gauche-->
+        <section>
+            <nav class="menu" style="left: 0px;">
+                <!--Photo de profil-->
+                <div class="blocs-menu">
+                    <div class="photoId" id="photo">
+                        <a href="#name">
+                            <img src="/img/DSC01566.jpg" alt="Photo d'identité"/>
+                        </a>
+                    </div>
+                </div>
+                <!--Présentation-->
+                <div class="blocs-menu">
+                    <span class="item-menu">
+                        <a href="#presentation">Présentation</a>
+                    </span>
+                </div>
+                <!--Formations-->
+                <div class="blocs-menu">
+                    <span class="item-menu">
+                        <a href="#training">Formations</a>
+                    </span>
+                </div>
+                <!--Compétences-->
+                <div class="blocs-menu">
+                    <span class="item-menu">
+                        <a href="#skills">Compétences</a>
+                    </span>
+                </div>
+                <!--Expériences-->
+                <div class="blocs-menu">
+                    <span class="item-menu">
+                        <a href="#experiences">Expériences</a>
+                    </span>
+                </div>
+                <!--Centres d'intérêt-->
+                <div class="blocs-menu">
+                    <span class="item-menu">
+                        <a href="#hobbies">Centres d'intérêt</a>
+                    </span>
+                </div>
+                <!--Contact-->
+                <div class="blocs-menu">
+                    <span class="item-menu">
+                        <a href="#contact">Contactez-moi</a>
+                    </span>
+                </div>               
             </nav>
         </section>
 
-        <!-- Section 1 Formations -->
-        <section id="training">
-            <div class="container">
-                <div class="col-md-8">
-                    <h1>Formations</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-            </div>
-        </section> 
+        <!-- Header -->
+        <header>
+            <section class="entete">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-md-12 col-xs-12" id="name">
+                            <h1>Ségolène Ganzin</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-10 col-lg-8" id="resume">                       
+                            <h4>Développeuse web en alternance<br>
+                                2 jours en formation / 3 jours en entreprise<br>
+                                12 mois</h4>
+                            <p>Après un parcours dans la restauration,<br>
+                                je retourne à ma première passion : l'informatique</p>
+                        </div>
 
-        <!-- Section 2 Compétences -->
-        <section id="skills">
-            <div class="container">
-                <div class="col-md-8">
-                    <h1>Compétences</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <div class="col-xs-12 col-md-8 col-lg-4" id="adress">
+                            <p> 28 ans <br>
+                                56600 Lanester <br> 
+                                <strong>Permis B + véhicule</strong><br>
+                                Bénéficiaire d'une <b>RQTH</b><br><br>
+                                <a href="https://www.linkedin.com/in/segoleneganzin/" target="_blank"><img src="img/linkedin.png" alt="Linkedin"></a>
+                                <a href="https://github.com/segoleneganzin" target="_blank"><img src="img/github.png" alt="GitHub"></a>
+                                <a href="https://app.assessfirst.com/_/profile/iixo7dtr-segolene-ganzin" target="_blank"><img src="img/app_assessFirst.png" alt="App AssessFirst"></a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </header>
 
-        <!-- Section 3 Expériences -->
-        <section id="experiences">
-            <div class="container">
-                <div class="col-md-8">
-                    <h1>Expériences</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <!--Contenu-->
+        <section class="contenu">
+            <!-- Section 1 Présentation -->
+            <section id="presentation">
+                <div class="container">
+                    <h1><img src="/img/presentation.png" alt="présentation">Présentation</h1>
+                    <div class="col-xs-11 col-md-12 col-lg-12">                        
+                        <p>J’ai grandi entouré d’ordinateurs et de périphériques en tout genre, au travers de l’entreprise familiale, et cela m’a toujours suivi et intéressé.<br> 
+                            Après plusieurs années en cuisine je fais le choix de retourner à ma première passion, l’informatique. <br> <br> 
+                            J’ai toujours aimé essayer de <strong>comprendre</strong> le fonctionnement des ordinateurs, <strong>résoudre</strong> des problèmes, <strong>trouver</strong> des solutions,<br>  
+                            <strong>aider</strong> les autres à travers le service client, me sentir utile, <strong>m’amuser à coder</strong>, découvrir de nouvelles choses et <strong>apprendre</strong> en permanence.<br> 
+                            La conception, le développement web et la maintenance m'attirent particulièrement, tout comme le traitement des bases de données et la cybersécurité des services informatiques.<br> <br> 
+                            <span class="quote">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+                                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                              </svg>                            
+                                Je fais souvent un parallèle plutôt surprenant entre la cuisine et l’informatique, en effet, au départ on a plusieurs “ingrédients” comme les logiciels, les langages de programmation,
+                                les bases de données, et “ustensiles” tels que les ordinateurs, les serveurs physiques, les imprimantes et les routeurs,
+                                qui vont nous mener à la réalisation d’un “plat” afin de satisfaire un client, comme par exemple une connexion internet réussie, 
+                                la création d'un site internet ou encore d'une application mobile et bien d'autres.
+                            </span>
+                            <br>  
+                            J’ai acquis des compétences informatiques lors de mes études en économie et en statistiques et informatique décisionnel, <br>
+                            comme les <strong>bases du codage</strong> (Html5, CSS3, JavaScript) et la suite <strong>Microsoft Office</strong>. <br><br>
+                            Mon goût pour l'apprentissage m'a amené à suivre des cours sur <strong>Windows</strong>, la virtualisation des environnements de travail (hyperviseurs de type 2 principalement - <strong>VirtualBox</strong>), 
+                            la mise en place d'une <strong>veille technologique</strong>, la conception d'un <strong>réseau TCP/IP</strong>, la gestion d'un <strong>serveur Windows</strong> et je continu à enrichir mes compétences tout en suivant la formation de prep'apprentissage chez Openclassrooms.<br> <br>
+                            Je souhaite poursuivre ma formation dans le développement de sites internet et d'applications métiers.<br> <br>
+                            Mon parcours et mes expériences professionnelles m’ont permis d’acquérir des compétences techniques et humaines, comme la <strong>rigueur</strong>, l'<strong>autonomie</strong> et le <strong>travail en équipe</strong>. Cela m’a également permis de connaître le monde du travail.<br> <br>
+                            Ma <strong>volonté</strong> et ma <strong>détermination</strong> vont me permettre d’atteindre mes objectifs.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section> 
+            <!-- Section 2 Formations -->
+            <section id="training">
+                <div class="container">
+                    <h1><img src="/img/training.png" alt="formations"> Formations</h1>
+                    <div class="col-12">
+                        <p><strong> 2021 - mars 2022</strong><br>
+                            Prép'apprentissage développeur Web avec Openclassrooms <br>
+                            <strong>2016 - 2017</strong> <br>
+                            CAP pâtisserie en candidat libre<br>
+                            <strong>2014 -2015</strong><br>
+                            CAP cuisine en candidat libre<br>
+                            <strong>2013 - 2014</strong><br>
+                            1ère année de DUT Statistiques et informatique décisionnel
+                            à l'IUT de Vannes (obtention du 1er semestre)<br>
+                            <strong>2011 - 2013</strong><br>
+                            Licence d'économie et gestion (L1) à l'UBS de Vannes<br>
+                            <strong>Juin 2011</strong><br>
+                            Bac économique et social au lycée Saint François Xavier à Vannes</p>
+                    </div>
+                </div>
+            </section> 
 
-        <!-- Section 4 Centres d'intérêts -->
-        <section id="hobbies">
-            <div class="container">
-                <div class="col-md-8">
+            <!-- Section 3 Compétences -->
+            <section id="skills">
+                <div class="container">
+                    <h1><img src="/img/skills.png" alt="compétences">Compétences</h1>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 col-lg-6">                       
+                            <p> 
+                                <strong>Echanger</strong> des idées <br>
+                                <strong>Transmettre</strong> des informations<br>
+                                <strong>Mobiliser</strong> l’écoute d’un public<br>
+                                <strong>S’adapter</strong> à l’environnement de travail<br><br>
+                                <strong>Dépasser</strong> des difficultés<br>
+                                <strong>Résoudre</strong> des problèmes<br><br>
+                                <strong>Analyser</strong> des besoins<br>
+                                <strong>Elaborer</strong> des stratégies<br>
+                                <strong>Etablir</strong> des objectifs<br>
+                                <strong>Mener</strong> un projet à terme<br>
+                            </p>
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-lg-6">
+                            <p>
+                                Bases de <strong>codage</strong> (Bash, HTML5, CSS3, JavaScript) <br>
+                                Utilisation de <strong>GitHub</strong><br>
+                                Réaliser une <strong>veille technologique</strong><br>
+                                Utiliser un <strong>terminal de commande</strong><br>
+                                Mettre en place un <strong>environnement de développement front-end</strong><br>
+                                Mettre en place un environnement de test avec <strong>VirtualBox</strong><br>
+                                Bonne maîtrise de <strong>Word et Excel</strong><br>
+                                Installer et paramétrer <strong>Windows 10</strong><br>
+                                Déployer Windows 10 avec <strong>Sysprep</strong><br>
+                                Gestion de <strong>Windows Server 2019</strong><br>
+                                <strong>Monter un ordinateur</strong> pour un client<br>
+                                <strong>Optimiser un réseau</strong> en ajoutant des services (DHCP, WDS, WSUS)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4 Expériences -->
+            <section id="experiences">
+                <div class="container">
+                    <h1><img src="/img/experience.png" alt="experiences">Expériences</h1>
+                    <div class="col-12">                        
+                        <h3>Informatique et développement Web</h3>
+                        <p>
+                            Création d'un CV en ligne - projet personnel <br>
+                            Intégration de produits en ligne (e-commerce) - Bonao <br>
+                            Mise en place d'un serveur Windows 2019 - projet OpenClassrooms
+                        </p>
+                        <h3>Restauration</h3>
+                        <h4>2017-2020</h4>
+                        <p>
+                            Restauration collective - Armonys Restauration <br>
+                            Restauration traditionnelle - Basilico Bistro <br>
+                            Boulangerie/pâtisserie - Boulangerie Marie Blachère <br>
+                            Restauration rapide - Restogare
+                        </p>
+                        <h3>Service civique</h3>
+                        <h4>2015-2016</h4>
+                        <h5>Association prévention routière du Morbihan</h5>
+                        <p>
+                            Sensibilisation aux risques routiers <br>
+                            Interventions dans divers établissements <br>
+
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5 Centres d'intérêts -->
+            <section id="hobbies">
+                <div class="container">
                     <h1>Centres d'intérêts</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <div class="col-12">                      
+                        <p>
+                            <img src="/img/ordinateur.png" alt="pc">
+                            <img src="/img/cuisine.png" alt="cuisine">
+                            <img src="/img/animaux.png" alt="animaux">
+                            <img src="/img/jeux-video.png" alt="jeux-video">
+                            <img src="/img/jeu.png" alt="jeux de société">
+                            <img src="/img/cheval.png" alt="équitation">
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Section 5 Contact -->
-        <section id="contact">
-            <div class="container">
-                <div class="col-md-8">
-                    <h1>Contactez-moi</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <!-- Section 6 Contact -->
+            <section id="contact">
+                <div class="container">
+                    <div class="col-12">
+                        <h1>Contactez-moi</h1>
+                        <form action="mailto:segolene.ganzin@gmail.com" name="contact__form">
+                            <div class="button">
+                                <button type="submit">Envoyer un mail</button>
+                            </div>
+                        </form>
+                        <a href="https://www.linkedin.com/in/segoleneganzin/" target="_blank"><img src="img/linkedin.png" alt="Linkedin"></a>
+                    </div>
                 </div>
-            </div>
+            </section>
         </section>
 
         <footer>
+            <p>From scratch by Ségolène GANZIN</p>
         </footer>
+        
+        <!--Scroll up-->
+        <div id="scroll_to_top">
+            <a href="#top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+              </svg></a>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
     </body>
 </html>
 
