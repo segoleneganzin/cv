@@ -1,0 +1,43 @@
+/*entete*/
+header {
+    background-color: $vert-sombre;
+    box-shadow: 0px 1px 5px $vert-sombre;
+    border-radius: 0 0 50% 30%;
+    width: calc(100% - 250px);
+    max-height: 500px;
+    position: relative;
+    margin-left: auto;
+    padding: 3% 5% 10% 2% ;
+    color: $vert-clair;
+
+    .entete h1{
+        width: 100%;
+        font-size: 6em;
+        margin-bottom: 5%;
+    }
+    #resume {
+        padding-left: 2%;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, xl)) {
+    header {
+        width: 100%;
+        margin: 0;
+        padding: 2;
+        z-index: 2;
+        border-radius: 0 0 50% 0;
+        max-height: 600px;
+    }
+    .entete h1 {
+        font-size: 3em;
+        margin-top: 1%;
+    }
+    #resume, #adress, #entete h1 {
+        padding-left: 5%;
+    }
+    #adress img {
+        max-width: 10% ;
+        max-height: 10%;
+    }
+}

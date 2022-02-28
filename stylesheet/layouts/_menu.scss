@@ -1,0 +1,116 @@
+/*menu gauche*/
+.menu {
+    display: block;
+    background-color: $couleur-menu;
+    width: 250px;
+    height: 100vh;
+    min-height: 800px;
+    position: fixed;
+    box-shadow: 2px 0px 5px $couleur-menu;
+    z-index: 5;
+    @media screen and (max-width: map-get($breakpoints, xl)) {
+        display: none;
+    }
+}
+.blocs-menu {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.blocs-menu:nth-child(1) {
+    width: 100%;
+    height: 25%;
+
+    .photoId img {
+        margin: 20px 0;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 20px 20px 50px black;
+    }
+}
+.blocs-menu span {
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10%;
+    margin-top: 3%;
+    @media screen and (max-width: map-get($breakpoints, xl)) {
+        padding: 0%;
+        margin-top: 0%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: 50% 50%;
+        width: 50%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #7887AB;
+        transition: transform 250ms;
+        }
+
+    &:hover {
+        &::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $bleu-clair;
+        font-size: 30px;
+    }
+}
+
+/*menu déroulant responsive*/
+.wrap__menu {
+    display: none;
+}
+
+@media screen and (max-width: map-get($breakpoints, xl)){
+    .wrap__menu{
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding-top: 1%;
+        position: static;
+        background-color: $couleur-menu;
+        img {
+            border-radius: 100%;
+            height: 25%;
+            width: 25%;
+            margin: auto;
+        }
+    }
+    .wrap__nav {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 150px;
+        padding: 0;
+        margin-top: 10%;
+        li {
+            display: flex;
+            width: auto;
+            list-style: none;
+            padding: 5;
+            margin: 5;
+        }
+        a{
+            padding: 18px 0;
+            text-decoration: none;
+            color: $bleu-clair;
+            font-size: larger;
+        }  
+    }
+
+}

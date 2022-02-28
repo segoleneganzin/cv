@@ -1,0 +1,16 @@
+/*footer*/
+footer {
+    width: calc(100% - 250px);
+    min-height: 100px;
+    background-color: $couleur-menu;
+    position: relative;
+    margin-left: auto;
+    border-radius: 0 100% 0 0;
+    box-shadow: 2px 0px 5px $couleur-menu;
+    p {
+        padding: 2% 0 0 2%;
+        margin: 0;
+        color: $vert-clair;
+        font-style: italic;
+    }
+}

@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Greatvibes";
+    src: url("/font/Great_Vibes/GreatVibes-Regular.ttf");
+}
+@font-face {
+    font-family: "Garamond";
+    src: url("/font/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
+}
+
+body {
+    font-family: "Garamond", sans-serif;
+} 
+
+h1 {
+    font-family: "Garamond",sans-serif;
+    font-weight: bold;
+}
+
+.contenu {
+    h1 {
+        font-size: 50px;
+        color: white;
+    }
+}
+
+#experiences {
+    h3 {
+        margin: 1%  1% ;
+    }
+    h4 {
+        font-style: italic;
+        font-size: smaller;
+        margin: 0 0 1% 0;
+    }
+}

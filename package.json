@@ -4,7 +4,7 @@
   "description": "\"CV en ligne\"",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./style.scss:./style.css"
+    "sass": "sass --watch ./stylesheet/style.scss:./stylesheet/style.css"
   },
   "repository": {
     "type": "git",
