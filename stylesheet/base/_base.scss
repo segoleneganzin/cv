@@ -11,4 +11,7 @@ body {
     background-attachment: fixed;
     background-size: 100%;
     color: $bleu-clair;
+    @media screen and (max-width: map-get($breakpoints, xl)) {
+      background-size: cover;
+    }
 } 

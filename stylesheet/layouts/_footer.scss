@@ -13,4 +13,9 @@ footer {
         color: $vert-clair;
         font-style: italic;
     }
+    @media screen and (max-width: map-get($breakpoints, xl)) {
+            width: 100%;
+            margin: 0;
+            padding: 10% 5% 0 5%;
+    }
 }

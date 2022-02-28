@@ -13,6 +13,11 @@ body {
   background-size: 100%;
   color: #7887AB;
 }
+@media screen and (max-width: 1200px) {
+  body {
+    background-size: cover;
+  }
+}
 
 @font-face {
   font-family: "Greatvibes";
@@ -223,6 +228,13 @@ footer p {
   color: #67989A;
   font-style: italic;
 }
+@media screen and (max-width: 1200px) {
+  footer {
+    width: 100%;
+    margin: 0;
+    padding: 10% 5% 0 5%;
+  }
+}
 
 /*scroll up*/
 #scroll_to_top {
@@ -313,14 +325,7 @@ footer p {
   margin: auto;
   padding: 2%;
 }
-
-/*Responsive*/
 @media screen and (max-width: 1200px) {
-  body {
-    background-size: cover;
-  }
-
-  /*Contenu*/
   .contenu {
     width: 100%;
     margin: 0;
@@ -350,12 +355,5 @@ footer p {
   }
   .contenu #contact h1 {
     font-size: 30px;
-  }
-
-  /*Footer*/
-  footer {
-    width: 100%;
-    margin: 0;
-    padding: 10% 5% 0 5%;
   }
 }/*# sourceMappingURL=style.css.map */
