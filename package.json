@@ -4,7 +4,8 @@
   "description": "\"CV en ligne\"",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./stylesheet/style.scss:./stylesheet/style.css"
+    "sass": "sass --watch ./stylesheet/style.scss:./stylesheet/style.css",
+    "prefix": "postcss ./stylesheet/style.css --use autoprefixer -d ./stylesheet/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,7 @@
   ],
   "author": "\"Ségolène Ganzin\"",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/segoleneganzin/cv/issues"
   },
