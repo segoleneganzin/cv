@@ -145,22 +145,22 @@ h1 {
     position: sticky;
     top: -1px;
     z-index: 99;
+    background-color: #003133;
   }
 
   .entete-menu-responsive {
     height: auto;
-    background-color: #003133;
     padding-left: 5%;
   }
   .entete-menu-responsive h1 {
     margin: 15% 0 15% 5%;
     font-size: 5em;
+    color: #67989A;
   }
 
   .photoId--responsive {
     display: flex;
     justify-content: center;
-    background-color: #003133;
     padding: 1% 0 1% 0;
   }
   .photoId--responsive img {
@@ -175,7 +175,6 @@ h1 {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #003133;
   }
   .responsive__menu li {
     list-style: none;

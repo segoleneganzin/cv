@@ -92,20 +92,20 @@
         position: sticky;
         top: -1px;
         z-index: 99;
+        background-color: $couleur-menu;
     }
     .entete-menu-responsive {
         height: auto;
-        background-color: $couleur-menu;
         padding-left: 5%;
         h1 {
             margin: 15% 0 15% 5%;
             font-size: 5em;
+            color: $vert-clair;
         }
     }
     .photoId--responsive {
         display: flex;
         justify-content: center;
-        background-color: $couleur-menu;
         padding: 1% 0 1% 0;
         img {
             border-radius: 50%;
@@ -119,7 +119,6 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        background-color: $couleur-menu;
         li {
             list-style: none;
         }
