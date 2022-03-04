@@ -141,31 +141,32 @@ h1 {
 @media screen and (max-width: 1200px) {
   .top-responsive {
     display: block;
-    position: -webkit-sticky;
-    position: sticky;
-    top: -1px;
-    z-index: 99;
+    position: static;
     background-color: #003133;
   }
 
   .entete-menu-responsive {
     height: auto;
+    margin: 0 2% 2% 2%;
     padding-left: 5%;
+    justify-content: space-evenly;
   }
-  .entete-menu-responsive h1 {
-    margin: 15% 0 15% 5%;
-    font-size: 5em;
-    color: #67989A;
-  }
-
-  .photoId--responsive {
+  .entete-menu-responsive .photoId--responsive {
     display: flex;
     justify-content: center;
-    padding: 1% 0 1% 0;
+    padding: 1% 1% 1% 0;
   }
-  .photoId--responsive img {
+  .entete-menu-responsive .photoId--responsive img {
     border-radius: 50%;
     box-shadow: 20px 20px 100px black;
+  }
+  .entete-menu-responsive .name--responsive {
+    display: flex;
+  }
+  .entete-menu-responsive .name--responsive h1 {
+    margin: 15% 2% 15% 5%;
+    font-size: 3em;
+    color: #67989A;
   }
 
   .responsive__menu {
@@ -198,14 +199,20 @@ h1 {
   }
 }
 @media screen and (max-width: 992px) {
-  .entete-menu-responsive h1 {
-    margin: 10% 5% 10% 5%;
-    font-size: 3em;
+  .photoId--responsive {
+    height: 25%;
+    width: 25%;
+    margin-top: 5%;
+  }
+
+  .name--responsive {
+    font-size: 25px;
   }
 }
-@media (orientation: landscape) and (max-width: 1200px) {
-  .top-responsive {
-    position: static;
+@media screen and (max-width: 576px) {
+  .name--responsive {
+    margin: 3% 3% 3% 1%;
+    font-size: 15px;
   }
 }
 /*entete*/

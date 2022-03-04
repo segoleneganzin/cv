@@ -89,27 +89,30 @@
 @media screen and (max-width: map-get($breakpoints, xl)){
     .top-responsive {
         display: block;
-        position: sticky;
-        top: -1px;
-        z-index: 99;
+        position: static;
         background-color: $couleur-menu;
     }
     .entete-menu-responsive {
         height: auto;
+        margin: 0 2% 2% 2%;
         padding-left: 5%;
-        h1 {
-            margin: 15% 0 15% 5%;
-            font-size: 5em;
-            color: $vert-clair;
+        justify-content: space-evenly;
+        .photoId--responsive {
+            display: flex;
+            justify-content: center;
+            padding: 1% 1% 1% 0;
+            img {
+                border-radius: 50%;
+                box-shadow: 20px 20px 100px black;
+            }
         }
-    }
-    .photoId--responsive {
-        display: flex;
-        justify-content: center;
-        padding: 1% 0 1% 0;
-        img {
-            border-radius: 50%;
-            box-shadow: 20px 20px 100px black;
+        .name--responsive {
+            display: flex;
+            h1 {
+                margin: 15% 2% 15% 5%;
+                font-size: 3em;
+                color: $vert-clair;
+            }
         }
     }
     .responsive__menu{
@@ -142,13 +145,19 @@
     }
 }
 @media screen and (max-width: map-get($breakpoints, lg)) {
-    .entete-menu-responsive h1 {
-            margin: 10% 5% 10% 5%;
-            font-size: 3em;
-        }
-}
-@media (orientation: landscape) and (max-width : map-get($breakpoints, xl)) {
-    .top-responsive {
-        position: static;
+    .photoId--responsive {
+        height: 25%;
+        width: 25%;
+        margin-top: 5%;
     }
+    .name--responsive {
+        font-size: 25px;
+    }
+
+}
+@media screen and (max-width: map-get($breakpoints, sm)) {
+    .name--responsive {
+            margin: 3% 3% 3% 1%;
+            font-size: 15px;
+        }
 }
